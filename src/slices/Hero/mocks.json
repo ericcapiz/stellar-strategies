@@ -3,27 +3,16 @@
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
 		"primary": {
-			"heading": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "heading1",
-						"content": {
-							"text": "Mock text",
-							"spans": []
-						},
-						"direction": "ltr"
-					}
-				]
-			},
 			"body": {
 				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Laborum pariatur nulla nisi veniam amet velit nulla incididunt eu aute aliqua veniam sint. Fugiat incididunt sunt sit amet enim ut pariatur sint excepteur minim exercitation dolore velit."
-						}
+							"text": "Collaborative approach, insightful strategies, driving sustainable growth and impact!",
+							"spans": []
+						},
+						"direction": "ltr"
 					}
 				]
 			},
@@ -61,6 +50,19 @@
 				"alt": null,
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
+			},
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Unlocking Potential, Amplifying Impact",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
 			}
 		},
 		"items": []

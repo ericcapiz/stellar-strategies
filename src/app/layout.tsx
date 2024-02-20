@@ -47,5 +47,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-//2hr 04min
