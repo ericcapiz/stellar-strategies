@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import clsx from "clsx";
 import { Nunito, Nunito_Sans } from "next/font/google";
+import { createClient } from "@/prismicio";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -15,10 +16,19 @@ const nunitoSans = Nunito_Sans({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: "Stellar Strategies",
-  description: "Marketing Agency",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const client = createClient();
+
+  const page = await client.getSingle("settings");
+
+  return {
+    title: page.data.site_title || "Stellar",
+    description: page.data.meta_description || "Stellar Strategies",
+    openGraph: {
+      images: [page.data.og_image.url || ""],
+    },
+  };
+}
 
 export default function RootLayout({
   children,
@@ -27,7 +37,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={clsx(nunito.variable, nunitoSans.variable)}>
-      <body>{children}</body>
+      <body>
+        <header>Header</header>
+        {children}
+        <footer>footer</footer>
+      </body>
     </html>
   );
 }
